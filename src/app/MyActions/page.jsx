@@ -1,16 +1,27 @@
-import React, { Suspense } from "react";
-import { useFetch } from "../../useFetch";
-import { fetchData } from "../../fetchData";
+"use client"
+import React, { Suspense, useEffect, useState} from "react";
 import styles from "./myActions.module.css";
 import Link from "next/link";
+
+import { useDispatch } from "react-redux";
+import { getAllActions } from "@/Redux/Actions/AllActions";
 // import Navbar from "@/components/Navbar/Navbar";
 
-const apiData = fetchData(
-  "https://api.twelvedata.com/stocks?source=docs&exchange=NYSE"
-);
+// const apiData = fetchData(
+//   "https://api.twelvedata.com/stocks?source=docs&exchange=NYSE"
+// );
+
+
 
 function MyActions() {
-  const data = apiData.read();
+  const [data,setData] = useState()
+  const dispatch = useDispatch();
+
+
+  useEffect(() => {
+    dispatch(getAllActions(setData));
+    console.log(data)
+}, [])
 
   return (
     <>
@@ -35,7 +46,7 @@ function MyActions() {
                     <th>Moneda</th>
                     <th></th>
                   </tr>
-                  {data?.data.map((item) => (
+                  {/* {data?.data.map((item) => (
                     <tr key={item.symbol}>
                       <td>
                         <Link
@@ -53,7 +64,7 @@ function MyActions() {
                         </button>
                       </td>
                     </tr>
-                  ))}
+                  ))} */}
                 </tbody>
               </table>
             </Suspense>

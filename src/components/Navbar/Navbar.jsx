@@ -11,25 +11,11 @@ function Navbar() {
 
   const [ user, setUser ] = useState(null)
 
-  //use use effect
-  useEffect(() => {
-      getUser()
-  }, [user])
-
-
-  const getUser  = () => {
-      axios({
-        method: 'get',
-        withCredentials: true,
-        url: 'http://localhost:3001/getUser'
-      }).then(res => {setUser(res.data.username)}).catch(err => {console.log(err)})
-  }
-
   return (
     <>
       <div className={styles.navbar}>
         <Link href="MisAcciones">
-          <Image className={styles.logoEmpresa} src={Logo} />
+          <Image alt="logo" className={styles.logoEmpresa} src={Logo} />
         </Link>
         <div className={styles.boxNombreUsuario}>
           <p>{user}</p>
