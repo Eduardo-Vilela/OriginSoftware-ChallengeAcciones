@@ -1,0 +1,74 @@
+.containerPrincipal{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ContainerTablet{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 30px;
+}
+.title{
+    color: #434343;
+    font-size: 2em;
+    display: inline-block;
+    font-weight: bold;
+}
+.boxFiltro{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    column-gap: 50px;
+    align-items: center;
+}
+.subtitulo{
+    color: #434343;
+    font-size: 1em;
+}
+.inputFiltrado{
+    color: #676767;
+    border: 2px solid #676767;
+    border-radius: 0.5em;
+    margin: 0;
+    padding: 0.4em;
+    font-size: 18px;
+}
+.buttonAgregar{
+    background-color: #035BDA;
+    color: white;
+    font-size: 1em;
+    padding: 14px;
+    border-radius: 20px;
+    border-color: transparent;
+    box-shadow: 4px 5px 8px rgb(51 51 51 / 40%);
+    transition: all .2s ease;
+}
+.buttonAgregar:hover{
+    transform: scale(1.1);
+}
+.buttonEliminar{
+    background-color: red;
+    color: white;
+    padding: 8px;
+    border-radius: 10px;
+    border-color: transparent;
+    transition: all .2s ease;
+}
+.buttonEliminar:hover{
+    transform: scale(1.1);
+}
+.linkDetalles:hover{
+    color: #035BDA;
+}
+.containerTable{
+    height: 500px;
+    max-height: 500px;
+    overflow: overlay;
+}

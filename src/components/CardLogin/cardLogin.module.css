@@ -1,0 +1,62 @@
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 400px;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    background-color: #035BDA;
+    box-shadow: 4px 5px 8px rgb(51 51 51 / 40%);
+    border-radius: 20px;
+    padding: 2em;
+    row-gap: 20px;
+    text-align: center;
+}
+.inputLogin{
+    color: #676767;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 0.5em;
+    width: 100%;
+    margin: 0;
+    padding: 0.6em;
+    font-size: 18px;
+}
+.containerButton{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.buttonLogin{
+    background-color: white;
+    color: #035BDA;
+    font-size: 18px;
+    padding: 14px;
+    border-radius: 20px;
+    border-color: transparent;
+    box-shadow: 4px 5px 8px rgb(51 51 51 / 40%);
+    transition: all .2s ease;
+}
+.buttonLogin:hover{
+    background-color: #035BDA;
+    color: white;
+    transform: scale(1.1);
+}
+.titleCard{
+    font-weight: bold;
+    font-size: 1.8vw;
+    line-height: 1;
+    color: white;
+}
+.logoWhite{
+    width: 250px;
+    height: auto;
+}
